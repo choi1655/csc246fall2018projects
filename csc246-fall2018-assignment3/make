@@ -1,0 +1,18 @@
+#!/bin/bash
+
+rm -f *.o
+if [ "$#" -ne 1 ]
+then
+	gcc -Wall -DUNSAFE -D_XOPEN_SOURCE -lpthread -std=c99 -g reset.c -o reset
+	gcc -Wall -DUNSAFE -D_XOPEN_SOURCE -lpthread -std=c99 -g fifteen.c -o fifteen
+else
+	gcc -Wall  -fsanitize=thread -D_XOPEN_SOURCE -lpthread -std=c99 -g reset.c -o reset
+	gcc -Wall  -fsanitize=thread -D_XOPEN_SOURCE -lpthread -std=c99 -g fifteen.c -o fifteen
+fi
+
+if [ "$?" == 0 ]
+then
+  echo "Reset and Fifteen compiled"
+else
+  echo "Error while compilation"
+fi

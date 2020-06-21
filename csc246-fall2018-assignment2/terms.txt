@@ -1,0 +1,4 @@
+1) Asynchronous thread cancellation: This refers to the thread that immediately terminates the other thread.
+2) Non-preemtive scheduler: This refers to the process scheduler that does not interrupt the currently running process and lets it finish running.
+3) Push migration: This refers to the OS periodically checking the buffer queue on each processor to check for an imbalance. If this is the case, OS will move a process from one processor to another.
+4) Remainder Section: This is the part of the source code where race condition will not be an issue. In other words, it is the section of the source code where multiple processes can run at the same time.

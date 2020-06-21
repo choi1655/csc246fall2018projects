@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ $# == 1 ]
+then
+  if [ "$1" == "clean" ]
+  then
+    rm -f *.o
+	for i in {1..3}
+	do
+		rm driver$i
+	done
+  elif [ $1 == "1" ]
+  then
+    gcc -Wall -std=c99 -g -D_XOPEN_SOURCE=500 pairMonitor.c driver1.c -o driver1 -lpthread -lm
+  elif [ $1 == 2 ]
+  then
+    gcc -Wall -std=c99 -g -D_XOPEN_SOURCE=500 pairMonitor.c driver2.c -o driver2 -lpthread -lm
+  elif [ $1 == 3 ]
+  then
+    gcc -Wall -std=c99 -g -D_XOPEN_SOURCE=500 pairMonitor.c driver3.c -o driver3 -lpthread -lm
+  elif [ "$1" == "all" ]
+  then
+  	for i in {1..3}
+	do
+		gcc -Wall -std=c99 -g -D_XOPEN_SOURCE=500 pairMonitor.c driver$i.c -o driver$i -lpthread -lm
+	done
+  else
+    echo "usage: ./make or ./make clean or ./make <driver number>"
+  fi
+else
+  gcc -Wall -std=c99 -g -D_XOPEN_SOURCE=500 pairMonitor.c driver1.c -o driver1 -lpthread -lm
+  if [ $? == 0 ]
+  then
+    echo "Compile successful"
+  else
+    echo "Compile error"
+  fi
+fi

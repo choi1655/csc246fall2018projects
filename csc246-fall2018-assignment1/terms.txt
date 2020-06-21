@@ -1,0 +1,4 @@
+a) NVRAM: NVRAM is a non-volatile random-access memory that does not lose information in case it loses power.
+b) Cache Coherency: Cache coherency is a sharing memory between multiple clients/processes in a shared memory system.
+c) Batch interface: Batch interface is a type of user interface, where it executes commands as a form of a file compared to GUI lets the user execute commands using icons and mouse and command-line interface lets the user execute commands by typing in the command into the terminal.
+d) Data section (of a process' memory): Data section is one of 4 sections in a memory that stores global variables.

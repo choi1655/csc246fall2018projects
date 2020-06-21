@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ $# == 0 ]
+then
+  echo "Compiling all"
+  javac Client.java
+  javac Server.java
+#  nvcc -g -G square.cu -o square
+elif [ "$1" == "square" ]
+then
+	echo "Compiling square"
+  nvcc -g -G square.cu -o square
+
+elif [ "$1" == "server" ]
+then
+	echo "Compiling Servers"
+  javac Client.java
+  javac Server.java
+fi
+
+if [ $? == 0 ]
+then
+  echo "Compile successful"
+else
+  echo "Compilation Error"
+fi

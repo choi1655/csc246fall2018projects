@@ -1,0 +1,2 @@
+srun -p gtx480 --pty /bin/bash
+module load cuda

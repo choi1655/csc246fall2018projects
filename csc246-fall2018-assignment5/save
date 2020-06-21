@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $# != 0 ]
+then
+  if [ $# == 1 ]
+  then
+  	git add .
+	git commit -m "$1"
+	git push
+  else
+    echo "usage: ./save"
+  fi
+else
+  git add .
+  git commit -m "Saving"
+  git push
+  if [ $? == 0 ]
+  then
+    echo "Pushed to GitHub repo successfully"
+  else
+    echo "Failed to push"
+  fi
+fi

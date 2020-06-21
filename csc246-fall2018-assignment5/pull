@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git pull https://github.ncsu.edu/mchoi/csc246-fall2018-assignment5.git master
+
+if [ $# == 0 ]
+then
+	echo "Repo pulled"
+else
+	echo "Error while pulling"
+fi

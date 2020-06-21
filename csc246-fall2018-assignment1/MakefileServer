@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -D_POSIX_SOURCE -Wall -std=c99 -g
+LDLIBS = -lrt
+ALL: server client
+server: server.o
+client: client.o
+server.o: server.c common.h
+client.o: client.c common.h
+
+clean:
+	rm -f *.o

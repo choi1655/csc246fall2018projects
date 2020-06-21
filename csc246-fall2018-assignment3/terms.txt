@@ -1,0 +1,4 @@
+a. Entry Set (in Java): Entry set in Java is a queue where new threads wait to enter Monitor in case where the monitor is already occupied by another thread. New threads in the entry set also compete with each other to decide which one to enter the monitor next.
+b. Binary semaphore: Binary semaphores are semaphores that only uses either 0 or 1 for its values.
+c. Assignment edge (in a resource allocation graph): This edge on the resource allocation graph is a way to indicate that the resource has been granted to the requesting process.
+d. Rollback (in deadlock detection/recovery): A method of recovery in case of deadlock, that restores the processes into the safe state and resumes running from that state.

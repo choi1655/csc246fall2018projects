@@ -1,0 +1,7 @@
+a) State where it was interrupted by the signal and state where it resumed action as a response to the signal.
+
+b) If fork() fails to succeed, it returns -1 in the parent.
+ If the reason it failed was reaching the parent's resource limit
+ on the number of processes, the appropriate error number will be set appropriately.
+c) mq_receive() function returns EINTR error to indicate that the call was interrupted by a signal handler. 
+d) signal() is not portable across the different UNIX platforms, but sigaction() is.
