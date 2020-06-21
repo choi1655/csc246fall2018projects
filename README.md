@@ -2,4 +2,4 @@
 NC State University AU18 CSC246 (Concepts and Facilities of Operating Systems) Projects
 
 ## Instructor
-Dr. David Sturgill, NC State University Dept. of Computer Science
+Dr. David Sturgill, North Carolina State University Dept. of Computer Science
